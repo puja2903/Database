@@ -1,3 +1,4 @@
+#11/22/2022
 # create db
 create database c2268;
 use c2268;
@@ -38,3 +39,25 @@ insert into student_details values
 (8,'ABHISHEK',834821188,'abhishek@gmail.com','darjeeling','MSc',1000.3,'1988-03-07',26),
 (9,'BIDISHA',834824488,'bidi@gmail.com','jammu and kashmir','BE',1000.3,'1988-02-08',33),
 (10,'TIYASA',834800288,'tiyasa@gmail.com','chennai','BSc',1000.3,'1979-12-09',40);
+
+#11/23/2022
+#select
+select* from student_details where squalification='BE';
+select* from student_details where saddr='chennai' and sfees='1000.3';
+select* from student_details where saddr='chennai' or sfees='1000.3';
+
+#not
+select* from student_details where squalification!='BE';
+#in
+select* from student_details where saddr in ('mumbai','chennai');
+#start with
+select* from student_details where sname like 'A%';
+#ends with
+select* from student_details where sname like'%A';
+#both start and end with
+select* from student_details where sname like'%A%';
+select* from student_details where sname like'B%A';
+
+#missing letter
+select* from student_details where saddr like'che__ai';
+select* from student_details where sname like'pu__';
